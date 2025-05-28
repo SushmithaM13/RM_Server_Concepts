@@ -56,10 +56,14 @@ app.get('/json' (req, res)=>{
 ```
 
 
-📌 3. HTTP Methods: GET vs POST vs PUT vs DELETE
+📌 3. HTTP Methods: GET vs POST vs PUT vs DELETE:
+
 **GET**: Used to retrieve data from the server. It is a safe method.
+
 **POST**: Used to send data to the server to create a new resource.
+
 **PUT**: Used to update an existing resource on the server.
+
 **DELETE**: Used to delete a resource from the server.
 
 ```js

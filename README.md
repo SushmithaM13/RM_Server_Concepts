@@ -38,12 +38,14 @@ app.get('/', (req, res)=>{
 });
 
 app.listen(3000, ()=>console.log('Server running on port 3000'));
+```
 
 📌 2. res.send() vs res.json()
 **res.send()**: Can send various types of responses such as a string (HTML), a Buffer, an object, or even an array. If you pass an object or array, Express will automatically convert it to JSON, but this is not as explicit as using res.json().
 
 **res.json()**: Specifically used to send a JSON response. It sets the appropriate headers (Content-Type: application/json) and stringifies the object.
 
+```js
 app.get('/text' (req, res)=>{
     res.send("hello world"); // Plain text
 });
@@ -51,6 +53,7 @@ app.get('/text' (req, res)=>{
 app.get('/json' (req, res)=>{
     res.json({"message": "hello world"}); // JSON response
 });
+```
 
 
 📌 3. HTTP Methods: GET vs POST vs PUT vs DELETE
@@ -59,6 +62,7 @@ app.get('/json' (req, res)=>{
 **PUT**: Used to update an existing resource on the server.
 **DELETE**: Used to delete a resource from the server.
 
+```js
 app.get('/users' (req,res()=>{
     res.json([{id: 1, name:'Alice'}]);
 }));
@@ -74,3 +78,4 @@ app.put('/users/:id' (req,res()=>{
 app.delete('/users/:id' (req,res()=>{
     res.json({message: `User ${req.params.id} updated`});
 }));
+```
